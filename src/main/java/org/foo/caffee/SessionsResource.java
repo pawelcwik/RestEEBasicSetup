@@ -15,5 +15,11 @@ public class SessionsResource {
     public String sessions() {
         return cc.getTime();
     }
+    
+    @GET
+    @Path("ships")
+    public String allShips() {
+        return cc.getShips();
+    }
 
 }

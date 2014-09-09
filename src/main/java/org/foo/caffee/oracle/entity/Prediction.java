@@ -1,5 +1,6 @@
-package org.foo.caffee.oracle;
+package org.foo.caffee.oracle.entity;
 
+import org.foo.caffee.oracle.entity.Result;
 import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -20,7 +21,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @NamedQuery(name=Prediction.findAll,query="Select d from Prediction d")
-class Prediction {
+public class Prediction {
 
     public final static String PREFIX = "org.foo.caffee.oracle.Prediction.";
     public final static String findAll = PREFIX+"findAll";

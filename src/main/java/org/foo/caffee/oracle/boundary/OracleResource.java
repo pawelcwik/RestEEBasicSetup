@@ -1,5 +1,7 @@
-package org.foo.caffee.oracle;
+package org.foo.caffee.oracle.boundary;
 
+import org.foo.caffee.oracle.entity.Result;
+import org.foo.caffee.oracle.control.Consultant;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.enterprise.inject.Instance;
@@ -8,7 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import static org.foo.caffee.oracle.Result.JAVA_IS_DEAD;
+import static org.foo.caffee.oracle.entity.Result.JAVA_IS_DEAD;
 
 
 @Path("javafuture")

@@ -1,4 +1,7 @@
-package org.foo.caffee.oracle;
+package org.foo.caffee.oracle.control;
+
+import org.foo.caffee.oracle.entity.Result;
+import org.foo.caffee.oracle.control.Consultant;
 
 public class Blogger implements Consultant {
 

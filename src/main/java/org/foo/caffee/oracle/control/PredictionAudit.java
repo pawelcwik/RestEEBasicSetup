@@ -1,4 +1,4 @@
-package org.foo.caffee.oracle;
+package org.foo.caffee.oracle.control;
 
 import java.util.List;
 import javax.ejb.Stateless;
@@ -6,6 +6,8 @@ import javax.enterprise.event.Observes;
 import javax.enterprise.event.TransactionPhase;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.foo.caffee.oracle.entity.Prediction;
+import org.foo.caffee.oracle.entity.Result;
 
 
 @Stateless
@@ -26,8 +28,8 @@ public class PredictionAudit {
         Prediction prediction = new Prediction(result,success);
         em.persist(prediction);
     }
-    
-    public List<Prediction> allDecisions() {
+
+    public List<Prediction> allPredictions() {
         return this.em.createNamedQuery(Prediction.findAll).getResultList();
     }
     
